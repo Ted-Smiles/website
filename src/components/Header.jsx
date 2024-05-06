@@ -6,6 +6,8 @@ const Header = () => {
 
     let location = useLocation();
 
+    console.log(location)
+
     let titleAtTop = true
 
     if (location.pathname === "/" || location.pathname === "/contact") {
