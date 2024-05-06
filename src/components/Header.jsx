@@ -10,7 +10,7 @@ const Header = () => {
 
     let titleAtTop = true
 
-    if (location.pathname === "/" || location.pathname === "/contact/") {
+    if (location.pathname === "/" || location.pathname === "/contact/" || location.pathname === "/contact") {
         titleAtTop = false
     }
 
@@ -41,9 +41,9 @@ const Header = () => {
                 <div className={`dropdown-menu ${isMenuOpen ? 'show' : ''}`}>
                     <div className="small-links">
                         <Link to="/" onClick={closeMenu} >Home</Link>
-                        <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
-                        <Link to="/about" onClick={closeMenu}>About</Link>
-                        <Link to="/contact" onClick={closeMenu}>Contact Me</Link>
+                        <Link to="/gallery/" onClick={closeMenu}>Gallery</Link>
+                        <Link to="/about/" onClick={closeMenu}>About</Link>
+                        <Link to="/contact/" onClick={closeMenu}>Contact Me</Link>
                     </div>
                 </div>
             </div>
