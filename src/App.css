@@ -144,6 +144,26 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+}
+
+#leaf {
+  position: absolute;
+  width:150px;
+  top: 10%;
+  left: 15%;
+}
+#flower {
+  position: absolute;
+  width:130px;
+  top: 60%;
+  left: 72%;
+}
+#leaves {
+  position: absolute;
+  width:150px;
+  top: 50%;
+  left: 75%;
 }
 
 .main button {
@@ -154,17 +174,32 @@
 
 /* About */
 .about {
+  height: 75vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .about-container {
-  width: 60%;
+  width: 50%;
   margin: 30px auto 0 auto;
   text-align: center;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+#stem {
+  position: absolute;
+  width:380px;
+  top: 35%;
+  left: 72%;
+}
+
+#flower-stem {
+  position: absolute;
+  width:200px;
+  top: 25%;
+  left: 8%;
 }
 /* Cards */
 .filters {
@@ -177,25 +212,44 @@
 .filter {
   flex: 1; 
   margin: 10px;
+  background-color: #f6f2e7;
 }
 
 .filter:hover {
   border: 1px solid #557c70;
 }
 
+.filter-end {
+  flex: 1; 
+  margin: 10px;
+  background-color: #f6f2e7;
+  color: red;
+}
+
 .cards-container {
+  min-height: 70vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr) ;
+  grid-template-columns: auto auto auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .card {
-  margin: 10px;
+  width: 100%; /* Take up the full width of its grid cell */
+  height: 400px; /* Set the height of the card */
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .card img {
-  width: 400px;
+  max-width: 100%; /* Ensure the image doesn't exceed the width of the card */
+  max-height: 100%; /* Ensure the image doesn't exceed the height of the card */
+  position: absolute; /* Position the image absolutely within the card */
+  top: 50%; /* Move the image 50% down from the top */
+  left: 50%; /* Move the image 50% from the left */
+  transform: translate(-50%, -50%); /* Translate the image back by half of its own width and height, centering it */
   cursor: pointer;
 }
 
@@ -205,7 +259,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); 
+  background-color: rgba(0, 0, 0, 0.9); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -335,3 +389,4 @@
 .footer {
   height: 15vh;
 }
+

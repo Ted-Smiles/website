@@ -8,6 +8,8 @@ const About = () => {
                 <p>Additionally, I am delighted to work on commissions, collaborating closely with you to bring your vision to life through my watercolour paintings.</p>
                 <p>Please feel free to reach out with any enquiries about sales, commissions, or if you simply wish to discuss the magical world of watercolour art.</p>
             </div>
+            <img id="stem" src="../src/images/A3EFDB52-E36E-4716-80C3-BD0A45175DF9.png" />
+            <img id="flower-stem" src="../src/images/26336A51-4CBF-4408-B690-9A10F8EF542D_4_5005_c.png" />
         </div>
     )
 }

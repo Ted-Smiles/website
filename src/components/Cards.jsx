@@ -6,7 +6,16 @@ const Cards = () => {
     const [filter, setFilter] = useState('')
 
     const handleClick = (e) => {
-        setFilter(e.target.innerText)
+        if (e.target.innerText === filter) {
+            setFilter('')
+            e.target.blur()
+        } else {
+            setFilter(e.target.innerText)
+        }
+    }
+
+    const handleClose = () => {
+        setFilter('')
     }
 
     const exampleData = [{
@@ -32,6 +41,7 @@ const Cards = () => {
                 <button className="filter" onClick={handleClick}>PETS</button>
                 <button className="filter" onClick={handleClick}>FLOWERS</button>
                 <button className="filter" onClick={handleClick}>LANDSCAPES</button>
+                {filter !== "" ? <button className="filter-end" onClick={handleClose}>X</button>: null}
             </div>
             <div className="cards-container">
                 <Card cardsData={exampleData} filter={filter}/>

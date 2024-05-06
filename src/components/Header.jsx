@@ -10,7 +10,7 @@ const Header = () => {
 
     let titleAtTop = true
 
-    if (location.pathname === "/" || location.pathname === "/contact") {
+    if (location.pathname === "/" || location.pathname === "/contact/") {
         titleAtTop = false
     }
 
@@ -19,7 +19,7 @@ const Header = () => {
     };
 
     const closeMenu = () => {
-        setShowMenu(false);
+        setIsMenuOpen(false);
     };
 
     return (
