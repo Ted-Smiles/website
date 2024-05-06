@@ -329,6 +329,8 @@
 
 .contact-container {
   display: flex;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .contact-title h1{
@@ -344,7 +346,6 @@
 
 .column {
   flex: 50%;
-  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
