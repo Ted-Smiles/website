@@ -1,6 +1,7 @@
 #root {
   text-align: center;
   width: 100%;
+  height: 100%;
   background-color: #f6f2e7;
   color: #557c70;
 }
@@ -16,7 +17,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 120px;
+  height: 15vh;
 }
 
 .title {
@@ -140,11 +141,16 @@
 
 /* Main */
 .main {
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   position: relative;
+}
+
+.main-title {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #leaf {
@@ -174,7 +180,8 @@
 
 /* About */
 .about {
-  height: 75vh;
+  min-height: 70vh;
+  background-color: #f6f2e7;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -272,9 +279,12 @@
 }
 
 .modal img {
-  width: 600px;
-  height: 600px; 
+  max-width: 600px;
+  max-height: 600px; 
+  width: 80%;
+  height: 80%;
   object-fit: contain; 
+  border: solid 1px black;
 }
 
 .close {
@@ -282,7 +292,7 @@
   top: 10px;
   right: 10px;
   color: white;
-  font-size: 30px;
+  font-size: 60px;
   cursor: pointer;
   z-index: 1000; 
 }
@@ -321,7 +331,7 @@
 
 /* Contact */
 .contact {
-  height: 75vh;
+  min-height: 70vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -356,7 +366,8 @@
   color: #557c70;
   padding: 15px;
   margin-bottom: 30px;
-  width: 300px;
+  max-width: 300px;
+  width: 80%;
   margin: 0 auto;
   background-color: #f6f2e7;
 }
@@ -389,6 +400,75 @@
 
  /* Footer */
 .footer {
+  background-color: #f6f2e7;
   height: 15vh;
 }
 
+
+
+@media only screen and (max-width: 800px) {
+  .main {
+    height: 70vh;
+  }
+  .main-title h1 {
+    font-size: 80px;
+  }
+  .main-title h3 {
+    font-size: 20px;
+  }
+  .about {
+    height: 100%
+  }
+  .about-container {
+    width: 70%;
+    height: 100%;
+  }
+  .filters {
+    width: 80%;
+  }
+  .cards-container {
+    width: 90%;
+    grid-template-columns: auto auto
+  }
+  .contact-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .column img {
+    display: none;
+  }
+  .contact-title h1 {
+    font-size: 50px;
+  }
+  .contact-title h3 {
+    font-size: 14px;
+    width: 70%;
+    margin-left: 0;
+    transform: translate(40%, -40%);
+  }
+  #leaf {
+    width:100px;
+    top: 2%;
+    left: 10%;
+  }
+  #flower {
+    width:100px;
+    top: 100%;
+    left: 56%;
+  }
+  #leaves {
+    width:120px;
+    top: 90%;
+    left: 68%;
+  }
+  #flower-stem {
+    width:60px;
+    top: 96%;
+    left: 84%;
+  }
+  #stem {
+    width:100px;
+    top: 48%;
+    left: 0%;
+  }
+}
